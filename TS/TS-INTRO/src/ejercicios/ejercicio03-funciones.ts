@@ -44,3 +44,44 @@ function multiplicarPred (num : number, num2 : number = 2 , num3 ?: number) : nu
     return num*num2;
 }
 console.log(multiplicarPred(1));
+
+
+// Ahora vamos a ver las funciones con parametros objetos.
+// sabemos que en TypeScript usamos un tipo de clases tontas.
+// llamadas interface que nos ayudan a restringuir los datos que 
+// vamos a mandar o usar dentro de nuestro codigo. Tambien podemos
+// asignarle funciones. Las cuales se declaran de esta forma.
+// haremos que un jugador se le suba los puntos de experiencia.
+
+interface Jugador{
+    nombre:string;
+    px:number;
+    mostrarInfo: () => void;
+}
+
+// ahora declaramos un jugador. Vean que se usa const y no let.
+// la verdad son lo mismo solo que es menos pesado const ya que no
+// debe setear lo de let o var. Const mantiene su valor y su valor es un Jugador.
+
+const jugador1 : Jugador = {
+    nombre:'colin',
+    px: 100,
+    mostrarInfo(){
+        console.log('nombre : ' + this.nombre + ' px:'+ this.px);
+    }
+};
+// como podemos notar se puede asignar una funcion como propiedad para un objeto
+// esto ya lo veremos mejor cuando se hagan clases y objetos.
+
+// ahora vamos a crear la funcion que reciba un Jugador como parametr
+// y vamos a sumarle los puntos de experiencia obtenidos.
+
+function ganarPx (jugador : Jugador , px : number) : void
+{
+    jugador.px += px;
+}
+
+// el jugador  gana 100 px
+ganarPx(jugador1,100);
+
+jugador1.mostrarInfo();
