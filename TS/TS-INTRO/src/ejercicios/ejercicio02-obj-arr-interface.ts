@@ -1,6 +1,5 @@
+
 /*
-    ===== Código de TypeScript =====
-*/
 // en TypeScript podemos hacer arreglos. Conocemos los arreglos como una coleccion de datos
 // que tienen algo en comun o mas bien deberian tener algo en comun, Sabemos que en JS los
 // arreglos pueden contenter cualquier tipo de valoers usando una declaracion como esto
@@ -38,4 +37,4 @@ const persona : Persona =
     edad : 22
 };
 persona.ciudadNatal = "CDMX";
-console.table(persona);
+console.table(persona);*/
