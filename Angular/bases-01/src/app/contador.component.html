@@ -1,0 +1,13 @@
+<!-- para usar nuestras variable so escribir codigo JS dentro de nuestro documentos simplemente usamos {}-->
+<!-- Podemos usar codigo JS directamente aqui para hacer el contador pero no es recomendable 
+    Lo que haremos es usar funciones dentro del compoenten TS para que sea mas limpio la forma en la que
+    Estamos programando.-->
+
+
+
+    <h1>{{title}}</h1>
+    <h1> Base <strong> {{base}} </strong></h1>
+    <button (click)="sumaResta(base)"> + {{base}} </button>
+    <span> {{numero}} </span>
+    <button (click) = "sumaResta(-base)"> - {{base}}</button>
+    
