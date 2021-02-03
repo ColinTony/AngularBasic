@@ -8,6 +8,8 @@
 let nombre : string = "Colin";
 let isLife : boolean = true;
 let edad : number = 22;
+let edad2='colin';
+
 
 // que pasa si queremos que un valor de tipo string tome un valor number
 // o viceversa. TS te permite darle dos tipos de valores a una variable.
