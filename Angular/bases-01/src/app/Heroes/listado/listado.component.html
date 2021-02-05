@@ -1,6 +1,16 @@
 
 <button (click) = "borrarHeroe()">Borrar un Herore</button>
-<h3>{{elim}}</h3>
+<!-- Podemos hacer un ngif Else usando referencias locales -->
+
+<div *ngIf = "isElim; else noBorrado">
+    <h3>Se elimino : {{elim}}</h3>
+</div>
+
+<ng-template #noBorrado>
+    <div>
+        <h3> No se ha borrado nada </h3>
+    </div>
+</ng-template>
 
 <h1>listado</h1>
 <ul>

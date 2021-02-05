@@ -2,19 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // debemos importarlo para poder usar diferentes componentes
 import { AppComponent } from './app.component';
-import { ContadorComponet } from './contadores/contador.component';
-import { HeroeComponent } from './Heroes/Heroe/heroe.component';
-import { ListadoComponent } from './Heroes/listado/listado.component';
+import { ListadoModule } from './Heroes/listado/listado.module';
+import { ContadorModule } from './contadores/contador.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ContadorComponet,
-    HeroeComponent,
-    ListadoComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ListadoModule,
+    ContadorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

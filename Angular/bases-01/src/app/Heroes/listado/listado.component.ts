@@ -8,6 +8,7 @@ export class ListadoComponent {
     
   public hereoes:string[] = ['IronMan','SpiderMan','Goku','Capitan America'];
   public elim:string = "Nada eliminado";
+  public isElim:boolean = false;
 
   borrarHeroe():void
   {
@@ -21,5 +22,6 @@ export class ListadoComponent {
       this.elim = "Ya no hay elementos;
     */
    this.elim = this.hereoes.shift() || "No hay elementos para borrar";
+   this.isElim = true;
   }
 }
