@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector:'app-contador',
-    templateUrl: '../contador.component.html'
+    templateUrl: './contador.component.html'
 })
 export class ContadorComponet {
      // esta clase se esta exportando para poder ser usada dentro de otro archivo

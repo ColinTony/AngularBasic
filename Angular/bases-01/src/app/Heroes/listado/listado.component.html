@@ -1,0 +1,10 @@
+
+<button (click) = "borrarHeroe()">Borrar un Herore</button>
+<h3>{{elim}}</h3>
+
+<h1>listado</h1>
+<ul>
+    <li *ngFor="let valor of hereoes; let i = index">
+        {{i+1}} - {{valor}}
+    </li>
+</ul>
