@@ -4,13 +4,13 @@
 
     <div class="col">
         <!-- Creando un componente aparte para ser un componente Hijo -->
-        <app-personajes [personajes] = "listaPersonajes"></app-personajes>
+        <app-personajes></app-personajes>
     </div>
 
     <div class="col">
-        <app-agregar [nuevoP] = "nuevoP" (onNewPersonaje) = "agregarNuevoPersonaje($event)"></app-agregar>
+        <app-agregar></app-agregar>
     </div>
     <div class="col">
-        <app-borrar [personajes] = "listaPersonajes" [elim] = "elim"></app-borrar>
+        <app-borrar></app-borrar>
     </div>
 </div>

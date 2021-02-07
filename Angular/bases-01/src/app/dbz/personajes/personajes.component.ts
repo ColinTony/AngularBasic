@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Personaje } from '../interfaces/personajes.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-personajes',
@@ -7,7 +8,10 @@ import { Personaje } from '../interfaces/personajes.interface';
 })
 export class PersonajesComponent {
 
-  // usamos el decorador input para darle una propiedad de componente padre
-  @Input()
-  public personajes:Personaje[] = [];
+  get personajes():Personaje[]
+  {
+    return this.dbzService.getPersonajes;
+  }
+  constructor(private dbzService:DbzService){}
+
 }

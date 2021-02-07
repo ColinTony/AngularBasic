@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Personaje } from '../interfaces/personajes.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-borrar',
@@ -7,18 +8,21 @@ import { Personaje } from '../interfaces/personajes.interface';
 })
 export class BorrarComponent {
 
-  public isBorrar:boolean = false;
   
-  @Input()
-  public personajes: Personaje[] = [];
-  
-  @Input()
-  public elim: Personaje = {nombre:"",poder:0};
-
-  borrar()
+  get isBorrar():boolean
   {
-    this.isBorrar = true;
-    this.elim = this.personajes.shift() || {nombre:"Nadie",poder:0};
+    return this.dbzService.isBorrarC;
   }
 
+  get elim():Personaje
+  {
+    return this.dbzService.getElimP;
+  }
+  borrar()
+  {
+    this.dbzService.borrar();
+  }
+
+  constructor(private dbzService:DbzService)
+  {}
 }
