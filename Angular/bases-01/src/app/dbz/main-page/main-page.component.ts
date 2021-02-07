@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
+import { Personaje } from '../interfaces/personajes.interface';
 
-interface Personaje {
-  nombre:string;
-  poder:number;
-}
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html'
 })
 export class MainPageComponent {
+
   public nuevoP : Personaje = {
     nombre:'',
     poder: 0
@@ -28,15 +26,9 @@ export class MainPageComponent {
     }
   ];
 
-  agregar()
+  agregarNuevoPersonaje( personaje:Personaje )
   {
-    if(this.nuevoP.nombre.trim().length === 0){ return }
-    this.listaPersonajes.push(this.nuevoP);
-    this.nuevoP = {nombre:"",poder:0};
+    this.listaPersonajes.push(personaje);
   }
-  borrar()
-  {
-    this.isBorrar = true;
-    this.elim = this.listaPersonajes.shift() || {nombre:"Nadie",poder:0};
-  }
+
 }
