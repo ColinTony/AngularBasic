@@ -1,0 +1,20 @@
+
+<div class="uk-card uk-card-default uk-width-1-2@m animate__animated animate__flipInX" *ngFor="let info of resultadosB">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="40" height="40" [src]="info.artist.picture_small">
+            </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{info.title_short}} - Artista : {{info.artist.name}}</h3>
+                <p class="uk-text-meta uk-margin-remove-top">Duracion : {{info.duration}} Artista : {{info.album.title}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body">
+        <audio [src]="info.preview" controls="controls" type="audio/mpeg" preload="preload"></audio>
+    </div>
+    <div class="uk-card-footer">
+        <a href="#" class="uk-button uk-button-text">Read more</a>
+    </div>
+</div>
