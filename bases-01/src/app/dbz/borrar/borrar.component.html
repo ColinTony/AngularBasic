@@ -1,0 +1,10 @@
+<h3>Borrar Personaje : </h3>
+<hr>
+<small *ngIf = "isBorrar; else borrado"> {{elim.nombre}}   --- >   {{elim.poder}} </small>
+<hr>
+<ng-template #borrado>
+    <h4> No hay elementos borrados</h4>
+</ng-template>
+<button (click) = "borrar()">
+            Borrar
+</button>

@@ -1,0 +1,20 @@
+
+<button (click) = "borrarHeroe()">Borrar un Herore</button>
+<!-- Podemos hacer un ngif Else usando referencias locales -->
+
+<div *ngIf = "isElim; else noBorrado">
+    <h3>Se elimino : {{elim}}</h3>
+</div>
+
+<ng-template #noBorrado>
+    <div>
+        <h3> No se ha borrado nada </h3>
+    </div>
+</ng-template>
+
+<h1>listado</h1>
+<ul>
+    <li *ngFor="let valor of hereoes; let i = index">
+        {{i+1}} - {{valor}}
+    </li>
+</ul>
