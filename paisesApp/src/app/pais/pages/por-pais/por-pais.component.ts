@@ -15,6 +15,7 @@ export class PorPaisComponent {
   
   buscar(termino:string)
   {
+    
     this.termino = termino;
     this.error = false;
     this.paisService.buscarPais(this.termino)
