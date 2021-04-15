@@ -1,0 +1,22 @@
+<div class="text-layout">
+    <h1>{{this.nombre | titlecase}}</h1>
+    <h1>{{this.edad | number}}</h1>    
+</div>
+
+
+<button pButton 
+        label = "Ver Datos" 
+        icon = "pi pi-check"
+        iconPos = "right"
+        class="p-button-help"
+        (click) = "mostrarData()"> 
+</button>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+
+<p-card [header]="nombre|titlecase" [subheader]="edad">
+    Contenido de la tarjeta para ver que onda
+</p-card>
